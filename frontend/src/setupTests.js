@@ -5,3 +5,6 @@
 import '@testing-library/jest-dom';
 
 global.clearImmediate = global.clearImmediate || function () {};
+global.setImmediate = global.setImmediate || function (fn, ...args) {
+  return setTimeout(fn, 0, ...args);
+};
